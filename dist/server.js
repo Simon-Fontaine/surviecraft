@@ -8,5 +8,4 @@ var express_1 = __importDefault(require("express"));
 var app = (0, express_1.default)();
 var port = 80;
 app.get("/", function (req, res) { return res.send("Hello World!"); });
-app.listen(port, function () { return console.log("Example app listening at http://localhost:".concat(port)); });
-console.log("free uptime website bot");
+app.listen(port, function () { return console.log("App listening at http://217.69.8.104:".concat(port)); });

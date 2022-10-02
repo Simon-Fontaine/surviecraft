@@ -136,7 +136,7 @@ exports.default = (function (client, instance) { return __awaiter(void 0, void 0
                     "",
                     "Le présent règlement est susceptible d'être modifié ultérieurement.",
                 ].join("\n"));
-                rows.push(new discord_js_1.MessageActionRow().addComponents(new discord_js_1.MessageButton().setLabel("Règlement En Ligne").setURL("https://surviecraft.fr/p/regles-serveur").setStyle("LINK"), new discord_js_1.MessageButton()
+                rows.push(new discord_js_1.MessageActionRow().addComponents(new discord_js_1.MessageButton().setLabel("Règlement En Ligne").setURL("https://surviecraft.fr/regles-ig").setStyle("LINK"), new discord_js_1.MessageButton()
                     .setLabel("Conditions Générales d'Utilisation de Discord")
                     .setURL("https://discord.com/terms")
                     .setStyle("LINK")));

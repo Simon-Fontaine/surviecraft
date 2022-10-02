@@ -36,8 +36,8 @@ jobs:
           host: ${{ secrets.HOST_IP }}
           username: ${{ secrets.HOST_USERNAME }}
           script: |
-            pm2 delete all
-            cd /alpaca/surviecraft
-            git pull
-            npm install
-            pm2 start dist/index.js
+            sudo pm2 delete all
+            sudo cd /alpaca/surviecraft
+            sudo git pull
+            sudo npm install
+            sudo pm2 start dist/index.js

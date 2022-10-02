@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 require("dotenv/config");
-require("dotenv/config");
 var ProdIDs;
 (function (ProdIDs) {
     ProdIDs["SIMON"] = "517770661733859329";

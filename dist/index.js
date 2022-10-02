@@ -79,5 +79,4 @@ client.on("ready", function () {
         ],
     }).setDisplayName("SurvieCraft");
 });
-require("./server");
 client.login(token);

@@ -36,6 +36,7 @@ jobs:
           host: ${{ secrets.HOST_IP }}
           username: ${{ secrets.HOST_USERNAME }}
           script: |
+            sudo su root
             pm2 delete all
             cd /root/surviecraft
             git pull

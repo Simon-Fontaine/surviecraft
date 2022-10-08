@@ -68,7 +68,7 @@ exports.default = {
             "",
             "**CODE :** `".concat(CODE_PROMO, "`"),
             "",
-            "> Bon jeu sur **S**urvie**C**raft <@&".concat(ids_1.default.EVERYONE_ROLE, "> !"),
+            "> Bon jeu sur **S**urvie**C**raft @everyone !",
             "Cordialement le Staff ".concat(surviecraftEmoji),
             "",
             "\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501",
@@ -77,7 +77,7 @@ exports.default = {
             content: content,
             components: rows,
             allowedMentions: {
-                roles: ["".concat(ids_1.default.EVERYONE_ROLE)],
+                parse: ["everyone"],
             },
         });
         return interaction.reply({

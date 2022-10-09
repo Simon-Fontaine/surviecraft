@@ -57,7 +57,7 @@ exports.default = {
         }
         var rows = [];
         rows.push(new discord_js_1.MessageActionRow().addComponents(new discord_js_1.MessageButton().setURL("https://surviecraft.fr/").setLabel("Boutique").setEmoji("🛒").setStyle("LINK")));
-        var surviecraftEmoji = guild.emojis.cache.find(function (emoji) { return emoji.name === "sc"; });
+        var surviecraftEmoji = guild.emojis.cache.find(function (emoji) { return emoji.name === "SC"; });
         if (!surviecraftEmoji) {
             throw new Error("Could not find the SurvieCraft emoji.");
         }

@@ -156,6 +156,10 @@ exports.default = (function (client, instance) { return __awaiter(void 0, void 0
                                                 allow: ["SEND_MESSAGES", "VIEW_CHANNEL", "READ_MESSAGE_HISTORY"],
                                             },
                                             {
+                                                id: ids_1.default.DEV_ROLE,
+                                                allow: ["SEND_MESSAGES", "VIEW_CHANNEL", "READ_MESSAGE_HISTORY"],
+                                            },
+                                            {
                                                 id: ids_1.default.MODO_ROLE,
                                                 allow: ["SEND_MESSAGES", "VIEW_CHANNEL", "READ_MESSAGE_HISTORY", "MANAGE_CHANNELS"],
                                             },

@@ -14,7 +14,7 @@ exports.default = {
     guildOnly: true,
     options: [
         {
-            name: "montant-minutes",
+            name: "montant-minute",
             description: "Le nombre de minutes avant l'event.",
             required: true,
             type: "NUMBER",
@@ -34,7 +34,7 @@ exports.default = {
             return;
         }
         var surviecraftEmoji = guild.emojis.cache.find(function (emoji) { return emoji.name === "SC"; });
-        var MONTANT_MINUTES = interaction.options.getNumber("montant-minutes");
+        var MONTANT_MINUTES = interaction.options.getNumber("montant-minute");
         var content = [
             "Bonjour cher joueurs,",
             "",

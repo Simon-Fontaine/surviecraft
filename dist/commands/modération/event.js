@@ -3,6 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+var animateur_utils_1 = require("../../util/animateur-utils");
 var ids_1 = __importDefault(require("../../util/ids"));
 exports.default = {
     category: "Modération",
@@ -21,7 +22,7 @@ exports.default = {
     ],
     callback: function (_a) {
         var member = _a.member, client = _a.client, interaction = _a.interaction;
-        if (!member.roles.cache.has(ids_1.default.ANIMATEUR_ROLE) || !member.roles.cache.has(ids_1.default.RESP_ROLE) || !member.roles.cache.has(ids_1.default.ADMIN_ROLE)) {
+        if (!(0, animateur_utils_1.isAnim)(member)) {
             return "Vous ne pouvez pas utiliser cette commande, vous n'êtes pas animateur.";
         }
         var guild = client.guilds.cache.get(ids_1.default.GUILD);

@@ -3,7 +3,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var staff_util_1 = require("../../util/staff-util");
 var ids_1 = __importDefault(require("../../util/ids"));
 exports.default = {
     category: "Modération",
@@ -22,8 +21,8 @@ exports.default = {
     ],
     callback: function (_a) {
         var member = _a.member, client = _a.client, interaction = _a.interaction;
-        if (!(0, staff_util_1.isStaff)(member)) {
-            return "Vous ne pouvez pas utiliser cette commande, vous ne faites pas partie du staff.";
+        if (!member.roles.cache.has(ids_1.default.ANIMATEUR_ROLE) || !member.roles.cache.has(ids_1.default.RESP_ROLE) || !member.roles.cache.has(ids_1.default.ADMIN_ROLE)) {
+            return "Vous ne pouvez pas utiliser cette commande, vous n'êtes pas animateur.";
         }
         var guild = client.guilds.cache.get(ids_1.default.GUILD);
         if (!guild) {
@@ -36,7 +35,7 @@ exports.default = {
         var surviecraftEmoji = guild.emojis.cache.find(function (emoji) { return emoji.name === "SC"; });
         var MONTANT_MINUTES = interaction.options.getNumber("montant-minute");
         var content = [
-            "Bonjour cher joueurs,",
+            "Bonjour chers joueurs,",
             "",
             "Nous vous informons que l'event propos\u00E9 par le Staff commencera dans **".concat(MONTANT_MINUTES, " minute").concat(MONTANT_MINUTES > 1 ? "s" : "", "** \u231B"),
             "",
